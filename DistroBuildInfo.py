@@ -342,14 +342,13 @@ for feed in FEED_URLS2:
                 white.append(machine)
 #    print("Distro:%s -> %s" % (distro, white))
 
-# generate blacklist
-#black = []
+black = []
 
-#for machine in model_machines.items():
-#    with open("Rel/%s" % machine[0], "w") as fd:
-#        if not machine[1]:
-#            black.append(machine[0])
-#        fd.write(" ".join(machine[1]))
+for machine in model_machines.items():
+    with open("Rel/%s" % machine[0], "w") as fd:
+        if not machine[1]:
+            black.append(machine[0])
+        fd.write(" ".join(machine[1]))
 
-#with open("Rel/black.lst", "w") as fd:
-#    fd.write("\n".join(black))
+with open("Rel/black.lst", "w") as fd:
+    fd.write("\n".join(black))
