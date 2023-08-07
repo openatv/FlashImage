@@ -21,8 +21,7 @@ jobs:
           sudo apt install rename
           mkdir Rel
           touch ./Rel/.nojekyll
-          cd ./Rel/
-          python3 ./DistroBuildInfo.py
+          python3 DistroBuildInfo.py
 
       - uses: peaceiris/actions-gh-pages@v3
         with:

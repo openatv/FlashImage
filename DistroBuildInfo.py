@@ -318,5 +318,5 @@ for feed in FEED_URLS2:
             model_machines[machine].append(distro)
 
 for machine in model_machines.items():
-    with open(machine[0], "w") as fd:
+    with open("Rel/%s" % machine[0], "w") as fd:
         fd.write(" ".join(machine[1]))
