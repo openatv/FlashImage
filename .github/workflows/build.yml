@@ -1,0 +1,31 @@
+name: build
+
+on:
+  schedule:
+    - cron:  '1 1 * * *'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: 'main'
+
+      - name: Build
+        run: |
+          sudo apt-get -q update
+          sudo apt install rename
+          mkdir Rel
+          touch ./Rel/.nojekyll
+          cd ./Rel/
+          python3 ./DistroBuildInfo.py
+
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Rel
+          force_orphan: true
