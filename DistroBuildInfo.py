@@ -1,4 +1,4 @@
-# Copyright (C) 2023 jbleyel
+# Copyright (C) 2023-2024 jbleyel
 #
 # DistroBuildInfo.py is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -311,8 +311,8 @@ def generate1():
     ]
 
     FEED_URLS2 = [
-        ("OpenPLi", "http://downloads.openpli.org/json/%s", "model"),
-        ("OpenVision", "https://images.openvision.dedyn.io/json/%s", "model")
+        ("OpenPLi", "http://downloads.openpli.org/json/%s", "model")
+#        ("OpenVision", "https://images.openvision.dedyn.io/json/%s", "model")
     ]
 
     machine_distros = {}
@@ -394,8 +394,8 @@ FEED_URLS = [
     ("EGAMI", "https://image.egami-image.com/json/%s"),
     ("OpenBH", "https://images.openbh.net/json/%s"),
     ("OpenSPA", "https://openspa.webhop.info/online/json.php?box=%s"),
-    ("OpenPLi", "http://downloads.openpli.org/json/%s"),
-    ("Open Vision", "https://images.openvision.dedyn.io/json/%s")
+    ("OpenPLi", "http://downloads.openpli.org/json/%s")
+#    ("Open Vision", "https://images.openvision.dedyn.io/json/%s")
 ]
 
 FEEDS = []
